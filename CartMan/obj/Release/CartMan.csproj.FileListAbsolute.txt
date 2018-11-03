@@ -1,0 +1,8 @@
+d:\Users\Tomek\documents\visual studio 2012\Projects\CartMan\CartMan\bin\Release\CartMan.exe.config
+d:\Users\Tomek\documents\visual studio 2012\Projects\CartMan\CartMan\bin\Release\CartMan.exe
+d:\Users\Tomek\documents\visual studio 2012\Projects\CartMan\CartMan\bin\Release\CartMan.pdb
+d:\Users\Tomek\documents\visual studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.Form1.resources
+d:\Users\Tomek\documents\visual studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.Properties.Resources.resources
+d:\Users\Tomek\documents\visual studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.csproj.GenerateResource.Cache
+d:\Users\Tomek\documents\visual studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.exe
+d:\Users\Tomek\documents\visual studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.pdb
