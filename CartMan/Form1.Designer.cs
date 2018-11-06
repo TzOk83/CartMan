@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tbProgress = new System.Windows.Forms.ToolStripProgressBar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -50,11 +51,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnMergeBrowseLow = new System.Windows.Forms.Button();
             this.tbMergeLowFile = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -87,6 +89,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.ShowToolTips = true;
             this.tabControl1.Size = new System.Drawing.Size(414, 188);
             this.tabControl1.TabIndex = 1;
             // 
@@ -105,6 +108,7 @@
             this.tabPage1.Size = new System.Drawing.Size(406, 162);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Split L/H";
+            this.tabPage1.ToolTipText = "Split a 16-bit binary image into two 8-bit ones.";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnSplitGo
@@ -187,6 +191,7 @@
             this.tabPage2.Size = new System.Drawing.Size(406, 162);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Merge L/H";
+            this.tabPage2.ToolTipText = "Merge a two splited 8-bit images into a single 16-bit image.";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -277,6 +282,17 @@
             this.tbMergeLowFile.Size = new System.Drawing.Size(304, 20);
             this.tbMergeLowFile.TabIndex = 7;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(406, 162);
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "Byteswap";
+            this.tabPage3.ToolTipText = "Byteswap a 16-bit ROM image to change from little- to big-endian (or other way ar" +
+    "ound).";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -284,6 +300,7 @@
             this.tabPage4.Size = new System.Drawing.Size(406, 162);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Separate ROMs";
+            this.tabPage4.ToolTipText = "Separate ROM images from a stacked image (multi-cart).";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage5
@@ -293,21 +310,13 @@
             this.tabPage5.Size = new System.Drawing.Size(406, 162);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Combine ROMs";
+            this.tabPage5.ToolTipText = "Combine multiple ROMs into a stacked image (multi-cart).";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "BIN files (*.bin)|*.bin|All files (*.*)|*.*";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(406, 162);
-            this.tabPage3.TabIndex = 4;
-            this.tabPage3.Text = "Byteswap";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -361,6 +370,7 @@
         private System.Windows.Forms.TextBox tbMergeLowFile;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
