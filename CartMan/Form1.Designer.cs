@@ -51,6 +51,7 @@
             this.btnMergeBrowseLow = new System.Windows.Forms.Button();
             this.tbMergeLowFile = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -81,6 +82,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -280,9 +282,18 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(406, 162);
-            this.tabPage4.TabIndex = 2;
-            this.tabPage4.Text = "Combine ROMs";
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Separate ROMs";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(406, 162);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Combine ROMs";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
@@ -294,8 +305,8 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(406, 162);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "Separate ROMs";
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "Byteswap";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -337,7 +348,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnMergeBrowseHigh;
         private System.Windows.Forms.TextBox tbMergeHighFile;
@@ -348,6 +359,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnMergeBrowseLow;
         private System.Windows.Forms.TextBox tbMergeLowFile;
+        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage3;
     }
 }
