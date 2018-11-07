@@ -117,7 +117,7 @@
             this.btnSplitGo.Name = "btnSplitGo";
             this.btnSplitGo.Size = new System.Drawing.Size(75, 23);
             this.btnSplitGo.TabIndex = 6;
-            this.btnSplitGo.Text = "GO!";
+            this.btnSplitGo.Text = "&GO!";
             this.btnSplitGo.UseVisualStyleBackColor = true;
             this.btnSplitGo.Click += new System.EventHandler(this.btnSplitGo_Click);
             // 
@@ -226,7 +226,7 @@
             this.btnMergeGo.Name = "btnMergeGo";
             this.btnMergeGo.Size = new System.Drawing.Size(75, 23);
             this.btnMergeGo.TabIndex = 13;
-            this.btnMergeGo.Text = "GO!";
+            this.btnMergeGo.Text = "&GO!";
             this.btnMergeGo.UseVisualStyleBackColor = true;
             this.btnMergeGo.Click += new System.EventHandler(this.btnMergeGo_Click);
             // 
