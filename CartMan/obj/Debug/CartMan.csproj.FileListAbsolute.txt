@@ -6,4 +6,3 @@ D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\C
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.csproj.GenerateResource.Cache
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.exe
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.pdb
-D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.csprojResolveAssemblyReference.cache

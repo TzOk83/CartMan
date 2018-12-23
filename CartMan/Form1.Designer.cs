@@ -57,10 +57,18 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnBsGo = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnBsBrowseFolder = new System.Windows.Forms.Button();
+            this.tbBsOutputFolder = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnBsBrowseFile = new System.Windows.Forms.Button();
+            this.tbBsInputFile = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -284,6 +292,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnBsGo);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.btnBsBrowseFolder);
+            this.tabPage3.Controls.Add(this.tbBsOutputFolder);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.btnBsBrowseFile);
+            this.tabPage3.Controls.Add(this.tbBsInputFile);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(406, 162);
@@ -318,6 +333,68 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "BIN files (*.bin)|*.bin|All files (*.*)|*.*";
             // 
+            // btnBsGo
+            // 
+            this.btnBsGo.Location = new System.Drawing.Point(166, 126);
+            this.btnBsGo.Name = "btnBsGo";
+            this.btnBsGo.Size = new System.Drawing.Size(75, 23);
+            this.btnBsGo.TabIndex = 13;
+            this.btnBsGo.Text = "GO!";
+            this.btnBsGo.UseVisualStyleBackColor = true;
+            this.btnBsGo.Click += new System.EventHandler(this.btnBsGo_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Output Folder:";
+            // 
+            // btnBsBrowseFolder
+            // 
+            this.btnBsBrowseFolder.Location = new System.Drawing.Point(375, 30);
+            this.btnBsBrowseFolder.Name = "btnBsBrowseFolder";
+            this.btnBsBrowseFolder.Size = new System.Drawing.Size(25, 23);
+            this.btnBsBrowseFolder.TabIndex = 11;
+            this.btnBsBrowseFolder.Text = "...";
+            this.btnBsBrowseFolder.UseVisualStyleBackColor = true;
+            this.btnBsBrowseFolder.Click += new System.EventHandler(this.btnBsBrowseFolder_Click);
+            // 
+            // tbBsOutputFolder
+            // 
+            this.tbBsOutputFolder.Location = new System.Drawing.Point(86, 32);
+            this.tbBsOutputFolder.Name = "tbBsOutputFolder";
+            this.tbBsOutputFolder.Size = new System.Drawing.Size(283, 20);
+            this.tbBsOutputFolder.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Input File:";
+            // 
+            // btnBsBrowseFile
+            // 
+            this.btnBsBrowseFile.Location = new System.Drawing.Point(375, 4);
+            this.btnBsBrowseFile.Name = "btnBsBrowseFile";
+            this.btnBsBrowseFile.Size = new System.Drawing.Size(25, 23);
+            this.btnBsBrowseFile.TabIndex = 8;
+            this.btnBsBrowseFile.Text = "...";
+            this.btnBsBrowseFile.UseVisualStyleBackColor = true;
+            this.btnBsBrowseFile.Click += new System.EventHandler(this.btnBsBrowseFile_Click);
+            // 
+            // tbBsInputFile
+            // 
+            this.tbBsInputFile.Location = new System.Drawing.Point(65, 6);
+            this.tbBsInputFile.Name = "tbBsInputFile";
+            this.tbBsInputFile.Size = new System.Drawing.Size(304, 20);
+            this.tbBsInputFile.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +413,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,6 +450,13 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnBsGo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnBsBrowseFolder;
+        private System.Windows.Forms.TextBox tbBsOutputFolder;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnBsBrowseFile;
+        private System.Windows.Forms.TextBox tbBsInputFile;
     }
 }
 

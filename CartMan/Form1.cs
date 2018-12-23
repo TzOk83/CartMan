@@ -80,7 +80,7 @@ namespace CartMan
                         {
                             LoStream.WriteByte((byte)inputStream.ReadByte());
                             HiStream.WriteByte((byte)inputStream.ReadByte());
-                            tbProgress.Value = (int)(100 * (i + 1) / LoStream.Length);
+                            tbProgress.Value = (int)(200 * (i + 1) / inputStream.Length);
                         }
                     }
                 }
@@ -116,6 +116,44 @@ namespace CartMan
             else
             {
                 MessageBox.Show("Low/High file sizes don't match!", "Size Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnBsBrowseFile_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                tbBsInputFile.Text = openFileDialog1.FileName;
+                tbBsOutputFolder.Text = Path.GetDirectoryName(openFileDialog1.FileName);
+                folderBrowserDialog1.SelectedPath = Path.GetDirectoryName(openFileDialog1.FileName);
+            }
+        }
+
+        private void btnBsBrowseFolder_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                tbBsOutputFolder.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void btnBsGo_Click(object sender, EventArgs e)
+        {
+            var BsFile = tbBsOutputFolder.Text + @"\" + Path.GetFileNameWithoutExtension(tbBsInputFile.Text) + "_BS" + Path.GetExtension(tbBsInputFile.Text);
+            byte LoByte, HiByte;
+            using (FileStream inputStream = new FileStream(tbBsInputFile.Text, FileMode.Open))
+            {
+                using (FileStream BsStream = new FileStream(BsFile, FileMode.Create))
+                {
+                    for (long i = 0; i < (inputStream.Length + 1) / 2; i++)
+                    {
+                        LoByte=((byte)inputStream.ReadByte());
+                        HiByte=((byte)inputStream.ReadByte());
+                        BsStream.WriteByte(HiByte);
+                        BsStream.WriteByte(LoByte);
+                        tbProgress.Value = (int)(200 * (i + 1) / inputStream.Length);
+                    }
+                }
             }
         }
     }
