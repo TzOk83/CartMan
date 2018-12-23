@@ -1,21 +1,9 @@
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\bin\Debug\CartMan.exe.config
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\bin\Debug\CartMan.exe
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\bin\Debug\CartMan.pdb
+D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.csprojResolveAssemblyReference.cache
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.Form1.resources
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.Properties.Resources.resources
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.csproj.GenerateResource.Cache
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.exe
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.pdb
-<<<<<<< HEAD
-=======
-D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.csprojResolveAssemblyReference.cache
-D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\bin\Debug\CartMan.exe.config
-D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.exe
-D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.pdb
-D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\bin\Debug\CartMan.exe
-D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\bin\Debug\CartMan.pdb
-D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.csprojResolveAssemblyReference.cache
-D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.Form1.resources
-D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.Properties.Resources.resources
-D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Debug\CartMan.csproj.GenerateResource.Cache
->>>>>>> 7538c5e620dd3dd27f7ab3ae3a8b9af9208056f6

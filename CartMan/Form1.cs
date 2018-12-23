@@ -84,18 +84,12 @@ namespace CartMan
                     {
                         using (FileStream HiStream = new FileStream(HiFile, FileMode.Create))
                         {
-<<<<<<< HEAD
-                            LoStream.WriteByte((byte)inputStream.ReadByte());
-                            HiStream.WriteByte((byte)inputStream.ReadByte());
-                            tbProgress.Value = (int)(200 * (i + 1) / inputStream.Length);
-=======
                             for (long i = 0; i < (inputStream.Length + 1) / 2; i++)
                             {
                                 LoStream.WriteByte((byte)inputStream.ReadByte());
                                 HiStream.WriteByte((byte)inputStream.ReadByte());
-                                tbProgress.Value = (int)(100 * (i + 1) / LoStream.Length);
+                                tbProgress.Value = (int)(200 * (i + 1) / inputStream.Length);
                             }
->>>>>>> 7538c5e620dd3dd27f7ab3ae3a8b9af9208056f6
                         }
                     }
                 }
