@@ -71,14 +71,14 @@ namespace CartMan
             var writeOk =  true;
             var HiFile = tbSplitOutputFolder.Text + @"\" + Path.GetFileNameWithoutExtension(tbSplitInputFile.Text) + "_H" + Path.GetExtension(tbSplitInputFile.Text);
             var LoFile = tbSplitOutputFolder.Text + @"\" + Path.GetFileNameWithoutExtension(tbSplitInputFile.Text) + "_L" + Path.GetExtension(tbSplitInputFile.Text);
-            using (FileStream inputStream = new FileStream(tbSplitInputFile.Text, FileMode.Open))
+            if (File.Exists(LoFile) | File.Exists(HiFile))
             {
-                if (File.Exists(LoFile) | File.Exists(HiFile))
-                {
-                    var result = MessageBox.Show("File Exists", "Hi or Lo File already exists in the destination directory. Overwrite?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.No) writeOk = false;
-                }
-                if (writeOk)
+                var result = MessageBox.Show("Hi or Lo file already exists in the destination directory. Overwrite?", "File Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.No) writeOk = false;
+            }
+            if (writeOk)
+            {
+                using (FileStream inputStream = new FileStream(tbSplitInputFile.Text, FileMode.Open))
                 {
                     using (FileStream LoStream = new FileStream(LoFile, FileMode.Create))
                     {
@@ -93,6 +93,8 @@ namespace CartMan
                         }
                     }
                 }
+                MessageBox.Show("File splited successfully!", "Job Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbProgress.Value = 0;
             }
         }
 
@@ -103,7 +105,7 @@ namespace CartMan
             var OutputFile = tbMergeOutputFolder.Text + @"\" + CName + "MGD" + Path.GetExtension(tbMergeLowFile.Text);
             if (File.Exists(OutputFile))
             {
-                var result = MessageBox.Show("File Exists", "Otput file already exists in the destination directory. Overwrite?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                var result = MessageBox.Show("Output file already exists in the destination directory. Overwrite?", "File Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == System.Windows.Forms.DialogResult.No)
                     writeOk = false;
             }
@@ -158,21 +160,32 @@ namespace CartMan
 
         private void btnBsGo_Click(object sender, EventArgs e)
         {
+            var writeOk = true;
             var BsFile = tbBsOutputFolder.Text + @"\" + Path.GetFileNameWithoutExtension(tbBsInputFile.Text) + "_BS" + Path.GetExtension(tbBsInputFile.Text);
             byte LoByte, HiByte;
-            using (FileStream inputStream = new FileStream(tbBsInputFile.Text, FileMode.Open))
+            if (File.Exists(BsFile))
             {
-                using (FileStream BsStream = new FileStream(BsFile, FileMode.Create))
+                var result = MessageBox.Show("Byteswapped file already exists in the destination directory. Overwrite?", "File Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.No) writeOk = false;
+            }
+            if (writeOk)
+            {
+                using (FileStream inputStream = new FileStream(tbBsInputFile.Text, FileMode.Open))
                 {
-                    for (long i = 0; i < (inputStream.Length + 1) / 2; i++)
+                    using (FileStream BsStream = new FileStream(BsFile, FileMode.Create))
                     {
-                        LoByte=((byte)inputStream.ReadByte());
-                        HiByte=((byte)inputStream.ReadByte());
-                        BsStream.WriteByte(HiByte);
-                        BsStream.WriteByte(LoByte);
-                        tbProgress.Value = (int)(200 * (i + 1) / inputStream.Length);
+                        for (long i = 0; i < (inputStream.Length + 1) / 2; i++)
+                        {
+                            LoByte = ((byte)inputStream.ReadByte());
+                            HiByte = ((byte)inputStream.ReadByte());
+                            BsStream.WriteByte(HiByte);
+                            BsStream.WriteByte(LoByte);
+                            tbProgress.Value = (int)(200 * (i + 1) / inputStream.Length);
+                        }
                     }
                 }
+                MessageBox.Show("Byteswap done successfully!", "Job Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbProgress.Value = 0;
             }
         }
     }
