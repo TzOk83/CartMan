@@ -52,11 +52,6 @@
             this.btnMergeBrowseLow = new System.Windows.Forms.Button();
             this.tbMergeLowFile = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnBsGo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnBsBrowseFolder = new System.Windows.Forms.Button();
@@ -64,11 +59,33 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnBsBrowseFile = new System.Windows.Forms.Button();
             this.tbBsInputFile = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.rb4k = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.rb512k = new System.Windows.Forms.RadioButton();
+            this.rb256k = new System.Windows.Forms.RadioButton();
+            this.rb128k = new System.Windows.Forms.RadioButton();
+            this.rb64k = new System.Windows.Forms.RadioButton();
+            this.rb32k = new System.Windows.Forms.RadioButton();
+            this.rb16k = new System.Windows.Forms.RadioButton();
+            this.rb8k = new System.Windows.Forms.RadioButton();
+            this.btnSplitRomGo = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnSplitRomBrowseFolder = new System.Windows.Forms.Button();
+            this.tbSplitRomOutputFolder = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnSplitRomBrowseFile = new System.Windows.Forms.Button();
+            this.tbSplitRomInputFile = new System.Windows.Forms.TextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -308,31 +325,6 @@
     "ound).";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(406, 162);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Separate ROMs";
-            this.tabPage4.ToolTipText = "Separate ROM images from a stacked image (multi-cart).";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(406, 162);
-            this.tabPage5.TabIndex = 2;
-            this.tabPage5.Text = "Combine ROMs";
-            this.tabPage5.ToolTipText = "Combine multiple ROMs into a stacked image (multi-cart).";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "BIN files (*.bin)|*.bin|All files (*.*)|*.*";
-            // 
             // btnBsGo
             // 
             this.btnBsGo.Location = new System.Drawing.Point(166, 126);
@@ -395,6 +387,208 @@
             this.tbBsInputFile.Size = new System.Drawing.Size(304, 20);
             this.tbBsInputFile.TabIndex = 7;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.rb4k);
+            this.tabPage4.Controls.Add(this.label10);
+            this.tabPage4.Controls.Add(this.rb512k);
+            this.tabPage4.Controls.Add(this.rb256k);
+            this.tabPage4.Controls.Add(this.rb128k);
+            this.tabPage4.Controls.Add(this.rb64k);
+            this.tabPage4.Controls.Add(this.rb32k);
+            this.tabPage4.Controls.Add(this.rb16k);
+            this.tabPage4.Controls.Add(this.rb8k);
+            this.tabPage4.Controls.Add(this.btnSplitRomGo);
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Controls.Add(this.btnSplitRomBrowseFolder);
+            this.tabPage4.Controls.Add(this.tbSplitRomOutputFolder);
+            this.tabPage4.Controls.Add(this.label9);
+            this.tabPage4.Controls.Add(this.btnSplitRomBrowseFile);
+            this.tabPage4.Controls.Add(this.tbSplitRomInputFile);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(406, 162);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Split ROMs";
+            this.tabPage4.ToolTipText = "Separate ROM images from a stacked image (multi-cart).";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // rb4k
+            // 
+            this.rb4k.AutoSize = true;
+            this.rb4k.Checked = true;
+            this.rb4k.Location = new System.Drawing.Point(86, 58);
+            this.rb4k.Name = "rb4k";
+            this.rb4k.Size = new System.Drawing.Size(44, 17);
+            this.rb4k.TabIndex = 22;
+            this.rb4k.TabStop = true;
+            this.rb4k.Text = "4kB";
+            this.toolTip1.SetToolTip(this.rb4k, "27C32");
+            this.rb4k.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 60);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Partition size:";
+            // 
+            // rb512k
+            // 
+            this.rb512k.AutoSize = true;
+            this.rb512k.Location = new System.Drawing.Point(272, 81);
+            this.rb512k.Name = "rb512k";
+            this.rb512k.Size = new System.Drawing.Size(56, 17);
+            this.rb512k.TabIndex = 20;
+            this.rb512k.Text = "512kB";
+            this.toolTip1.SetToolTip(this.rb512k, "27C040");
+            this.rb512k.UseVisualStyleBackColor = true;
+            // 
+            // rb256k
+            // 
+            this.rb256k.AutoSize = true;
+            this.rb256k.Location = new System.Drawing.Point(210, 81);
+            this.rb256k.Name = "rb256k";
+            this.rb256k.Size = new System.Drawing.Size(56, 17);
+            this.rb256k.TabIndex = 19;
+            this.rb256k.Text = "256kB";
+            this.toolTip1.SetToolTip(this.rb256k, "27C020");
+            this.rb256k.UseVisualStyleBackColor = true;
+            // 
+            // rb128k
+            // 
+            this.rb128k.AutoSize = true;
+            this.rb128k.Location = new System.Drawing.Point(148, 81);
+            this.rb128k.Name = "rb128k";
+            this.rb128k.Size = new System.Drawing.Size(56, 17);
+            this.rb128k.TabIndex = 18;
+            this.rb128k.Text = "128kB";
+            this.toolTip1.SetToolTip(this.rb128k, "27C010");
+            this.rb128k.UseVisualStyleBackColor = true;
+            // 
+            // rb64k
+            // 
+            this.rb64k.AutoSize = true;
+            this.rb64k.Location = new System.Drawing.Point(86, 81);
+            this.rb64k.Name = "rb64k";
+            this.rb64k.Size = new System.Drawing.Size(50, 17);
+            this.rb64k.TabIndex = 17;
+            this.rb64k.Text = "64kB";
+            this.toolTip1.SetToolTip(this.rb64k, "27C512");
+            this.rb64k.UseVisualStyleBackColor = true;
+            // 
+            // rb32k
+            // 
+            this.rb32k.AutoSize = true;
+            this.rb32k.Location = new System.Drawing.Point(272, 58);
+            this.rb32k.Name = "rb32k";
+            this.rb32k.Size = new System.Drawing.Size(50, 17);
+            this.rb32k.TabIndex = 16;
+            this.rb32k.Text = "32kB";
+            this.toolTip1.SetToolTip(this.rb32k, "27C256");
+            this.rb32k.UseVisualStyleBackColor = true;
+            // 
+            // rb16k
+            // 
+            this.rb16k.AutoSize = true;
+            this.rb16k.Location = new System.Drawing.Point(210, 58);
+            this.rb16k.Name = "rb16k";
+            this.rb16k.Size = new System.Drawing.Size(50, 17);
+            this.rb16k.TabIndex = 15;
+            this.rb16k.Text = "16kB";
+            this.toolTip1.SetToolTip(this.rb16k, "27C128");
+            this.rb16k.UseVisualStyleBackColor = true;
+            // 
+            // rb8k
+            // 
+            this.rb8k.AutoSize = true;
+            this.rb8k.Location = new System.Drawing.Point(148, 58);
+            this.rb8k.Name = "rb8k";
+            this.rb8k.Size = new System.Drawing.Size(44, 17);
+            this.rb8k.TabIndex = 14;
+            this.rb8k.Text = "8kB";
+            this.toolTip1.SetToolTip(this.rb8k, "27C64");
+            this.rb8k.UseVisualStyleBackColor = true;
+            // 
+            // btnSplitRomGo
+            // 
+            this.btnSplitRomGo.Location = new System.Drawing.Point(166, 126);
+            this.btnSplitRomGo.Name = "btnSplitRomGo";
+            this.btnSplitRomGo.Size = new System.Drawing.Size(75, 23);
+            this.btnSplitRomGo.TabIndex = 13;
+            this.btnSplitRomGo.Text = "&GO!";
+            this.btnSplitRomGo.UseVisualStyleBackColor = true;
+            this.btnSplitRomGo.Click += new System.EventHandler(this.btnSplitRomGo_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 35);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Output Folder:";
+            // 
+            // btnSplitRomBrowseFolder
+            // 
+            this.btnSplitRomBrowseFolder.Location = new System.Drawing.Point(375, 30);
+            this.btnSplitRomBrowseFolder.Name = "btnSplitRomBrowseFolder";
+            this.btnSplitRomBrowseFolder.Size = new System.Drawing.Size(25, 23);
+            this.btnSplitRomBrowseFolder.TabIndex = 11;
+            this.btnSplitRomBrowseFolder.Text = "...";
+            this.btnSplitRomBrowseFolder.UseVisualStyleBackColor = true;
+            this.btnSplitRomBrowseFolder.Click += new System.EventHandler(this.btnSplitRomBrowseFolder_Click);
+            // 
+            // tbSplitRomOutputFolder
+            // 
+            this.tbSplitRomOutputFolder.Location = new System.Drawing.Point(86, 32);
+            this.tbSplitRomOutputFolder.Name = "tbSplitRomOutputFolder";
+            this.tbSplitRomOutputFolder.Size = new System.Drawing.Size(283, 20);
+            this.tbSplitRomOutputFolder.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Input File:";
+            // 
+            // btnSplitRomBrowseFile
+            // 
+            this.btnSplitRomBrowseFile.Location = new System.Drawing.Point(375, 4);
+            this.btnSplitRomBrowseFile.Name = "btnSplitRomBrowseFile";
+            this.btnSplitRomBrowseFile.Size = new System.Drawing.Size(25, 23);
+            this.btnSplitRomBrowseFile.TabIndex = 8;
+            this.btnSplitRomBrowseFile.Text = "...";
+            this.btnSplitRomBrowseFile.UseVisualStyleBackColor = true;
+            this.btnSplitRomBrowseFile.Click += new System.EventHandler(this.btnSplitRomBrowseFile_Click);
+            // 
+            // tbSplitRomInputFile
+            // 
+            this.tbSplitRomInputFile.Location = new System.Drawing.Point(65, 6);
+            this.tbSplitRomInputFile.Name = "tbSplitRomInputFile";
+            this.tbSplitRomInputFile.Size = new System.Drawing.Size(304, 20);
+            this.tbSplitRomInputFile.TabIndex = 7;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(406, 162);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Merge ROMs";
+            this.tabPage5.ToolTipText = "Combine multiple ROMs into a stacked image (multi-cart).";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "BIN files (*.bin)|*.bin|All files (*.*)|*.*";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +609,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,6 +653,22 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnBsBrowseFile;
         private System.Windows.Forms.TextBox tbBsInputFile;
+        private System.Windows.Forms.RadioButton rb4k;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton rb512k;
+        private System.Windows.Forms.RadioButton rb256k;
+        private System.Windows.Forms.RadioButton rb128k;
+        private System.Windows.Forms.RadioButton rb64k;
+        private System.Windows.Forms.RadioButton rb32k;
+        private System.Windows.Forms.RadioButton rb16k;
+        private System.Windows.Forms.RadioButton rb8k;
+        private System.Windows.Forms.Button btnSplitRomGo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnSplitRomBrowseFolder;
+        private System.Windows.Forms.TextBox tbSplitRomOutputFolder;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSplitRomBrowseFile;
+        private System.Windows.Forms.TextBox tbSplitRomInputFile;
     }
 }
 

@@ -188,5 +188,68 @@ namespace CartMan
                 tbProgress.Value = 0;
             }
         }
+
+        private void btnSplitRomGo_Click(object sender, EventArgs e)
+        {
+            var writeOk = true;
+            var fileExists = false;
+            var inputSize = new FileInfo(tbSplitRomInputFile.Text).Length;
+            var chunkSize = rb4k.Checked ? 4096 : rb8k.Checked ? 8192 : rb16k.Checked ? 16384 : rb32k.Checked ? 32768 : rb64k.Checked ? 65536 : rb128k.Checked ? 131072 : rb256k.Checked ? 262144 : 524288;
+            var romCount = (Int32)(inputSize / chunkSize);
+            List<string> SepFile = new List<string>();
+            for (Int32 chunk = 0; chunk < romCount; chunk++)
+            {
+                SepFile.Add(tbSplitRomOutputFolder.Text + @"\" + Path.GetFileNameWithoutExtension(tbSplitRomInputFile.Text) + "_ROM" + chunk.ToString() + Path.GetExtension(tbSplitRomInputFile.Text));
+            }
+            foreach (string chunkPath in SepFile)
+            {
+                if (File.Exists(chunkPath))
+                {
+                    fileExists = true;
+                }
+            }
+            if (fileExists)
+            {
+                var result = MessageBox.Show("File already exists in the destination directory. Overwrite?", "File Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.No) writeOk = false;
+            }
+            if (writeOk)
+            {
+                using (FileStream inputStream = new FileStream(tbSplitRomInputFile.Text, FileMode.Open))
+                {
+                    for (Int32 chunk = 0; chunk < romCount; chunk++)
+                    {
+                        using (FileStream chunkStream = new FileStream(SepFile[chunk], FileMode.Create))
+                        {
+                            for (Int32 i = 0; i < chunkSize; i++)
+                            {
+                                chunkStream.WriteByte((byte)inputStream.ReadByte());
+                                tbProgress.Value = (int)(100 * (chunk * chunkSize + i + 1) / inputStream.Length);
+                            }
+                        }
+                    }
+                }
+                MessageBox.Show("File splited successfully!", "Job Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbProgress.Value = 0;
+            }
+        }
+
+        private void btnSplitRomBrowseFile_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                tbSplitRomInputFile.Text = openFileDialog1.FileName;
+                tbSplitRomOutputFolder.Text = Path.GetDirectoryName(openFileDialog1.FileName);
+                folderBrowserDialog1.SelectedPath = Path.GetDirectoryName(openFileDialog1.FileName);
+            }
+        }
+
+        private void btnSplitRomBrowseFolder_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                tbSplitRomOutputFolder.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
     }
 }
