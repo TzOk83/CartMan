@@ -60,15 +60,15 @@
             this.btnBsBrowseFile = new System.Windows.Forms.Button();
             this.tbBsInputFile = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.rb4k = new System.Windows.Forms.RadioButton();
+            this.rbS4k = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.rb512k = new System.Windows.Forms.RadioButton();
-            this.rb256k = new System.Windows.Forms.RadioButton();
-            this.rb128k = new System.Windows.Forms.RadioButton();
-            this.rb64k = new System.Windows.Forms.RadioButton();
-            this.rb32k = new System.Windows.Forms.RadioButton();
-            this.rb16k = new System.Windows.Forms.RadioButton();
-            this.rb8k = new System.Windows.Forms.RadioButton();
+            this.rbS512k = new System.Windows.Forms.RadioButton();
+            this.rbS256k = new System.Windows.Forms.RadioButton();
+            this.rbS128k = new System.Windows.Forms.RadioButton();
+            this.rbS64k = new System.Windows.Forms.RadioButton();
+            this.rbS32k = new System.Windows.Forms.RadioButton();
+            this.rbS16k = new System.Windows.Forms.RadioButton();
+            this.rbS8k = new System.Windows.Forms.RadioButton();
             this.btnSplitRomGo = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSplitRomBrowseFolder = new System.Windows.Forms.Button();
@@ -80,12 +80,30 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.rbM4k = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.rbM512k = new System.Windows.Forms.RadioButton();
+            this.rbM256k = new System.Windows.Forms.RadioButton();
+            this.rbM128k = new System.Windows.Forms.RadioButton();
+            this.rbM64k = new System.Windows.Forms.RadioButton();
+            this.rbM32k = new System.Windows.Forms.RadioButton();
+            this.rbM16k = new System.Windows.Forms.RadioButton();
+            this.rbM8k = new System.Windows.Forms.RadioButton();
+            this.btnMergeRGo = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnMergeRBrowseOutput = new System.Windows.Forms.Button();
+            this.tbMergeROutputFile = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnMergeRBrowseInput = new System.Windows.Forms.Button();
+            this.lbSourceFiles = new System.Windows.Forms.ListBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -389,15 +407,15 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.rb4k);
+            this.tabPage4.Controls.Add(this.rbS4k);
             this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.rb512k);
-            this.tabPage4.Controls.Add(this.rb256k);
-            this.tabPage4.Controls.Add(this.rb128k);
-            this.tabPage4.Controls.Add(this.rb64k);
-            this.tabPage4.Controls.Add(this.rb32k);
-            this.tabPage4.Controls.Add(this.rb16k);
-            this.tabPage4.Controls.Add(this.rb8k);
+            this.tabPage4.Controls.Add(this.rbS512k);
+            this.tabPage4.Controls.Add(this.rbS256k);
+            this.tabPage4.Controls.Add(this.rbS128k);
+            this.tabPage4.Controls.Add(this.rbS64k);
+            this.tabPage4.Controls.Add(this.rbS32k);
+            this.tabPage4.Controls.Add(this.rbS16k);
+            this.tabPage4.Controls.Add(this.rbS8k);
             this.tabPage4.Controls.Add(this.btnSplitRomGo);
             this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Controls.Add(this.btnSplitRomBrowseFolder);
@@ -410,107 +428,107 @@
             this.tabPage4.Size = new System.Drawing.Size(406, 162);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Split ROMs";
-            this.tabPage4.ToolTipText = "Separate ROM images from a stacked image (multi-cart).";
+            this.tabPage4.ToolTipText = "Split a stacked image (multi-cart) into ROMs.";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // rb4k
+            // rbS4k
             // 
-            this.rb4k.AutoSize = true;
-            this.rb4k.Checked = true;
-            this.rb4k.Location = new System.Drawing.Point(86, 58);
-            this.rb4k.Name = "rb4k";
-            this.rb4k.Size = new System.Drawing.Size(44, 17);
-            this.rb4k.TabIndex = 22;
-            this.rb4k.TabStop = true;
-            this.rb4k.Text = "4kB";
-            this.toolTip1.SetToolTip(this.rb4k, "27C32");
-            this.rb4k.UseVisualStyleBackColor = true;
+            this.rbS4k.AutoSize = true;
+            this.rbS4k.Checked = true;
+            this.rbS4k.Location = new System.Drawing.Point(86, 58);
+            this.rbS4k.Name = "rbS4k";
+            this.rbS4k.Size = new System.Drawing.Size(44, 17);
+            this.rbS4k.TabIndex = 22;
+            this.rbS4k.TabStop = true;
+            this.rbS4k.Text = "4kB";
+            this.toolTip1.SetToolTip(this.rbS4k, "27C32");
+            this.rbS4k.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 60);
+            this.label10.Location = new System.Drawing.Point(6, 60);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.Size = new System.Drawing.Size(56, 13);
             this.label10.TabIndex = 21;
-            this.label10.Text = "Partition size:";
+            this.label10.Text = "ROM size:";
             // 
-            // rb512k
+            // rbS512k
             // 
-            this.rb512k.AutoSize = true;
-            this.rb512k.Location = new System.Drawing.Point(272, 81);
-            this.rb512k.Name = "rb512k";
-            this.rb512k.Size = new System.Drawing.Size(56, 17);
-            this.rb512k.TabIndex = 20;
-            this.rb512k.Text = "512kB";
-            this.toolTip1.SetToolTip(this.rb512k, "27C040");
-            this.rb512k.UseVisualStyleBackColor = true;
+            this.rbS512k.AutoSize = true;
+            this.rbS512k.Location = new System.Drawing.Point(272, 81);
+            this.rbS512k.Name = "rbS512k";
+            this.rbS512k.Size = new System.Drawing.Size(56, 17);
+            this.rbS512k.TabIndex = 20;
+            this.rbS512k.Text = "512kB";
+            this.toolTip1.SetToolTip(this.rbS512k, "27C040");
+            this.rbS512k.UseVisualStyleBackColor = true;
             // 
-            // rb256k
+            // rbS256k
             // 
-            this.rb256k.AutoSize = true;
-            this.rb256k.Location = new System.Drawing.Point(210, 81);
-            this.rb256k.Name = "rb256k";
-            this.rb256k.Size = new System.Drawing.Size(56, 17);
-            this.rb256k.TabIndex = 19;
-            this.rb256k.Text = "256kB";
-            this.toolTip1.SetToolTip(this.rb256k, "27C020");
-            this.rb256k.UseVisualStyleBackColor = true;
+            this.rbS256k.AutoSize = true;
+            this.rbS256k.Location = new System.Drawing.Point(210, 81);
+            this.rbS256k.Name = "rbS256k";
+            this.rbS256k.Size = new System.Drawing.Size(56, 17);
+            this.rbS256k.TabIndex = 19;
+            this.rbS256k.Text = "256kB";
+            this.toolTip1.SetToolTip(this.rbS256k, "27C020");
+            this.rbS256k.UseVisualStyleBackColor = true;
             // 
-            // rb128k
+            // rbS128k
             // 
-            this.rb128k.AutoSize = true;
-            this.rb128k.Location = new System.Drawing.Point(148, 81);
-            this.rb128k.Name = "rb128k";
-            this.rb128k.Size = new System.Drawing.Size(56, 17);
-            this.rb128k.TabIndex = 18;
-            this.rb128k.Text = "128kB";
-            this.toolTip1.SetToolTip(this.rb128k, "27C010");
-            this.rb128k.UseVisualStyleBackColor = true;
+            this.rbS128k.AutoSize = true;
+            this.rbS128k.Location = new System.Drawing.Point(148, 81);
+            this.rbS128k.Name = "rbS128k";
+            this.rbS128k.Size = new System.Drawing.Size(56, 17);
+            this.rbS128k.TabIndex = 18;
+            this.rbS128k.Text = "128kB";
+            this.toolTip1.SetToolTip(this.rbS128k, "27C010");
+            this.rbS128k.UseVisualStyleBackColor = true;
             // 
-            // rb64k
+            // rbS64k
             // 
-            this.rb64k.AutoSize = true;
-            this.rb64k.Location = new System.Drawing.Point(86, 81);
-            this.rb64k.Name = "rb64k";
-            this.rb64k.Size = new System.Drawing.Size(50, 17);
-            this.rb64k.TabIndex = 17;
-            this.rb64k.Text = "64kB";
-            this.toolTip1.SetToolTip(this.rb64k, "27C512");
-            this.rb64k.UseVisualStyleBackColor = true;
+            this.rbS64k.AutoSize = true;
+            this.rbS64k.Location = new System.Drawing.Point(86, 81);
+            this.rbS64k.Name = "rbS64k";
+            this.rbS64k.Size = new System.Drawing.Size(50, 17);
+            this.rbS64k.TabIndex = 17;
+            this.rbS64k.Text = "64kB";
+            this.toolTip1.SetToolTip(this.rbS64k, "27C512");
+            this.rbS64k.UseVisualStyleBackColor = true;
             // 
-            // rb32k
+            // rbS32k
             // 
-            this.rb32k.AutoSize = true;
-            this.rb32k.Location = new System.Drawing.Point(272, 58);
-            this.rb32k.Name = "rb32k";
-            this.rb32k.Size = new System.Drawing.Size(50, 17);
-            this.rb32k.TabIndex = 16;
-            this.rb32k.Text = "32kB";
-            this.toolTip1.SetToolTip(this.rb32k, "27C256");
-            this.rb32k.UseVisualStyleBackColor = true;
+            this.rbS32k.AutoSize = true;
+            this.rbS32k.Location = new System.Drawing.Point(272, 58);
+            this.rbS32k.Name = "rbS32k";
+            this.rbS32k.Size = new System.Drawing.Size(50, 17);
+            this.rbS32k.TabIndex = 16;
+            this.rbS32k.Text = "32kB";
+            this.toolTip1.SetToolTip(this.rbS32k, "27C256");
+            this.rbS32k.UseVisualStyleBackColor = true;
             // 
-            // rb16k
+            // rbS16k
             // 
-            this.rb16k.AutoSize = true;
-            this.rb16k.Location = new System.Drawing.Point(210, 58);
-            this.rb16k.Name = "rb16k";
-            this.rb16k.Size = new System.Drawing.Size(50, 17);
-            this.rb16k.TabIndex = 15;
-            this.rb16k.Text = "16kB";
-            this.toolTip1.SetToolTip(this.rb16k, "27C128");
-            this.rb16k.UseVisualStyleBackColor = true;
+            this.rbS16k.AutoSize = true;
+            this.rbS16k.Location = new System.Drawing.Point(210, 58);
+            this.rbS16k.Name = "rbS16k";
+            this.rbS16k.Size = new System.Drawing.Size(50, 17);
+            this.rbS16k.TabIndex = 15;
+            this.rbS16k.Text = "16kB";
+            this.toolTip1.SetToolTip(this.rbS16k, "27C128");
+            this.rbS16k.UseVisualStyleBackColor = true;
             // 
-            // rb8k
+            // rbS8k
             // 
-            this.rb8k.AutoSize = true;
-            this.rb8k.Location = new System.Drawing.Point(148, 58);
-            this.rb8k.Name = "rb8k";
-            this.rb8k.Size = new System.Drawing.Size(44, 17);
-            this.rb8k.TabIndex = 14;
-            this.rb8k.Text = "8kB";
-            this.toolTip1.SetToolTip(this.rb8k, "27C64");
-            this.rb8k.UseVisualStyleBackColor = true;
+            this.rbS8k.AutoSize = true;
+            this.rbS8k.Location = new System.Drawing.Point(148, 58);
+            this.rbS8k.Name = "rbS8k";
+            this.rbS8k.Size = new System.Drawing.Size(44, 17);
+            this.rbS8k.TabIndex = 14;
+            this.rbS8k.Text = "8kB";
+            this.toolTip1.SetToolTip(this.rbS8k, "27C64");
+            this.rbS8k.UseVisualStyleBackColor = true;
             // 
             // btnSplitRomGo
             // 
@@ -576,18 +594,197 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.lbSourceFiles);
+            this.tabPage5.Controls.Add(this.rbM4k);
+            this.tabPage5.Controls.Add(this.label11);
+            this.tabPage5.Controls.Add(this.rbM512k);
+            this.tabPage5.Controls.Add(this.rbM256k);
+            this.tabPage5.Controls.Add(this.rbM128k);
+            this.tabPage5.Controls.Add(this.rbM64k);
+            this.tabPage5.Controls.Add(this.rbM32k);
+            this.tabPage5.Controls.Add(this.rbM16k);
+            this.tabPage5.Controls.Add(this.rbM8k);
+            this.tabPage5.Controls.Add(this.btnMergeRGo);
+            this.tabPage5.Controls.Add(this.label12);
+            this.tabPage5.Controls.Add(this.btnMergeRBrowseOutput);
+            this.tabPage5.Controls.Add(this.tbMergeROutputFile);
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.btnMergeRBrowseInput);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(406, 162);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Merge ROMs";
-            this.tabPage5.ToolTipText = "Combine multiple ROMs into a stacked image (multi-cart).";
+            this.tabPage5.ToolTipText = "Merge ROMs into a stacked image (multi-cart).";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "BIN files (*.bin)|*.bin|All files (*.*)|*.*";
+            // 
+            // rbM4k
+            // 
+            this.rbM4k.AutoSize = true;
+            this.rbM4k.Checked = true;
+            this.rbM4k.Location = new System.Drawing.Point(86, 63);
+            this.rbM4k.Name = "rbM4k";
+            this.rbM4k.Size = new System.Drawing.Size(44, 17);
+            this.rbM4k.TabIndex = 38;
+            this.rbM4k.TabStop = true;
+            this.rbM4k.Text = "4kB";
+            this.toolTip1.SetToolTip(this.rbM4k, "27C32");
+            this.rbM4k.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 65);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 13);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "ROM size:";
+            // 
+            // rbM512k
+            // 
+            this.rbM512k.AutoSize = true;
+            this.rbM512k.Location = new System.Drawing.Point(272, 86);
+            this.rbM512k.Name = "rbM512k";
+            this.rbM512k.Size = new System.Drawing.Size(56, 17);
+            this.rbM512k.TabIndex = 36;
+            this.rbM512k.Text = "512kB";
+            this.toolTip1.SetToolTip(this.rbM512k, "27C040");
+            this.rbM512k.UseVisualStyleBackColor = true;
+            // 
+            // rbM256k
+            // 
+            this.rbM256k.AutoSize = true;
+            this.rbM256k.Location = new System.Drawing.Point(210, 86);
+            this.rbM256k.Name = "rbM256k";
+            this.rbM256k.Size = new System.Drawing.Size(56, 17);
+            this.rbM256k.TabIndex = 35;
+            this.rbM256k.Text = "256kB";
+            this.toolTip1.SetToolTip(this.rbM256k, "27C020");
+            this.rbM256k.UseVisualStyleBackColor = true;
+            // 
+            // rbM128k
+            // 
+            this.rbM128k.AutoSize = true;
+            this.rbM128k.Location = new System.Drawing.Point(148, 86);
+            this.rbM128k.Name = "rbM128k";
+            this.rbM128k.Size = new System.Drawing.Size(56, 17);
+            this.rbM128k.TabIndex = 34;
+            this.rbM128k.Text = "128kB";
+            this.toolTip1.SetToolTip(this.rbM128k, "27C010");
+            this.rbM128k.UseVisualStyleBackColor = true;
+            // 
+            // rbM64k
+            // 
+            this.rbM64k.AutoSize = true;
+            this.rbM64k.Location = new System.Drawing.Point(86, 86);
+            this.rbM64k.Name = "rbM64k";
+            this.rbM64k.Size = new System.Drawing.Size(50, 17);
+            this.rbM64k.TabIndex = 33;
+            this.rbM64k.Text = "64kB";
+            this.toolTip1.SetToolTip(this.rbM64k, "27C512");
+            this.rbM64k.UseVisualStyleBackColor = true;
+            // 
+            // rbM32k
+            // 
+            this.rbM32k.AutoSize = true;
+            this.rbM32k.Location = new System.Drawing.Point(272, 63);
+            this.rbM32k.Name = "rbM32k";
+            this.rbM32k.Size = new System.Drawing.Size(50, 17);
+            this.rbM32k.TabIndex = 32;
+            this.rbM32k.Text = "32kB";
+            this.toolTip1.SetToolTip(this.rbM32k, "27C256");
+            this.rbM32k.UseVisualStyleBackColor = true;
+            // 
+            // rbM16k
+            // 
+            this.rbM16k.AutoSize = true;
+            this.rbM16k.Location = new System.Drawing.Point(210, 63);
+            this.rbM16k.Name = "rbM16k";
+            this.rbM16k.Size = new System.Drawing.Size(50, 17);
+            this.rbM16k.TabIndex = 31;
+            this.rbM16k.Text = "16kB";
+            this.toolTip1.SetToolTip(this.rbM16k, "27C128");
+            this.rbM16k.UseVisualStyleBackColor = true;
+            // 
+            // rbM8k
+            // 
+            this.rbM8k.AutoSize = true;
+            this.rbM8k.Location = new System.Drawing.Point(148, 63);
+            this.rbM8k.Name = "rbM8k";
+            this.rbM8k.Size = new System.Drawing.Size(44, 17);
+            this.rbM8k.TabIndex = 30;
+            this.rbM8k.Text = "8kB";
+            this.toolTip1.SetToolTip(this.rbM8k, "27C64");
+            this.rbM8k.UseVisualStyleBackColor = true;
+            // 
+            // btnMergeRGo
+            // 
+            this.btnMergeRGo.Location = new System.Drawing.Point(166, 126);
+            this.btnMergeRGo.Name = "btnMergeRGo";
+            this.btnMergeRGo.Size = new System.Drawing.Size(75, 23);
+            this.btnMergeRGo.TabIndex = 29;
+            this.btnMergeRGo.Text = "&GO!";
+            this.btnMergeRGo.UseVisualStyleBackColor = true;
+            this.btnMergeRGo.Click += new System.EventHandler(this.btnMergeRGo_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 40);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(61, 13);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Output File:";
+            // 
+            // btnMergeRBrowseOutput
+            // 
+            this.btnMergeRBrowseOutput.Location = new System.Drawing.Point(375, 35);
+            this.btnMergeRBrowseOutput.Name = "btnMergeRBrowseOutput";
+            this.btnMergeRBrowseOutput.Size = new System.Drawing.Size(25, 23);
+            this.btnMergeRBrowseOutput.TabIndex = 27;
+            this.btnMergeRBrowseOutput.Text = "...";
+            this.btnMergeRBrowseOutput.UseVisualStyleBackColor = true;
+            this.btnMergeRBrowseOutput.Click += new System.EventHandler(this.btnMergeRBrowseOutput_Click);
+            // 
+            // tbMergeROutputFile
+            // 
+            this.tbMergeROutputFile.Location = new System.Drawing.Point(86, 37);
+            this.tbMergeROutputFile.Name = "tbMergeROutputFile";
+            this.tbMergeROutputFile.Size = new System.Drawing.Size(283, 20);
+            this.tbMergeROutputFile.TabIndex = 26;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 13);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Input Files:";
+            // 
+            // btnMergeRBrowseInput
+            // 
+            this.btnMergeRBrowseInput.Location = new System.Drawing.Point(375, 4);
+            this.btnMergeRBrowseInput.Name = "btnMergeRBrowseInput";
+            this.btnMergeRBrowseInput.Size = new System.Drawing.Size(25, 23);
+            this.btnMergeRBrowseInput.TabIndex = 24;
+            this.btnMergeRBrowseInput.Text = "...";
+            this.btnMergeRBrowseInput.UseVisualStyleBackColor = true;
+            this.btnMergeRBrowseInput.Click += new System.EventHandler(this.btnMergeRBrowseInput_Click);
+            // 
+            // lbSourceFiles
+            // 
+            this.lbSourceFiles.Location = new System.Drawing.Point(65, 4);
+            this.lbSourceFiles.Name = "lbSourceFiles";
+            this.lbSourceFiles.ScrollAlwaysVisible = true;
+            this.lbSourceFiles.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lbSourceFiles.Size = new System.Drawing.Size(303, 30);
+            this.lbSourceFiles.TabIndex = 39;
             // 
             // Form1
             // 
@@ -611,6 +808,8 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,15 +852,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnBsBrowseFile;
         private System.Windows.Forms.TextBox tbBsInputFile;
-        private System.Windows.Forms.RadioButton rb4k;
+        private System.Windows.Forms.RadioButton rbS4k;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton rb512k;
-        private System.Windows.Forms.RadioButton rb256k;
-        private System.Windows.Forms.RadioButton rb128k;
-        private System.Windows.Forms.RadioButton rb64k;
-        private System.Windows.Forms.RadioButton rb32k;
-        private System.Windows.Forms.RadioButton rb16k;
-        private System.Windows.Forms.RadioButton rb8k;
+        private System.Windows.Forms.RadioButton rbS512k;
+        private System.Windows.Forms.RadioButton rbS256k;
+        private System.Windows.Forms.RadioButton rbS128k;
+        private System.Windows.Forms.RadioButton rbS64k;
+        private System.Windows.Forms.RadioButton rbS32k;
+        private System.Windows.Forms.RadioButton rbS16k;
+        private System.Windows.Forms.RadioButton rbS8k;
         private System.Windows.Forms.Button btnSplitRomGo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSplitRomBrowseFolder;
@@ -669,6 +868,23 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSplitRomBrowseFile;
         private System.Windows.Forms.TextBox tbSplitRomInputFile;
+        private System.Windows.Forms.ListBox lbSourceFiles;
+        private System.Windows.Forms.RadioButton rbM4k;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RadioButton rbM512k;
+        private System.Windows.Forms.RadioButton rbM256k;
+        private System.Windows.Forms.RadioButton rbM128k;
+        private System.Windows.Forms.RadioButton rbM64k;
+        private System.Windows.Forms.RadioButton rbM32k;
+        private System.Windows.Forms.RadioButton rbM16k;
+        private System.Windows.Forms.RadioButton rbM8k;
+        private System.Windows.Forms.Button btnMergeRGo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnMergeRBrowseOutput;
+        private System.Windows.Forms.TextBox tbMergeROutputFile;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnMergeRBrowseInput;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

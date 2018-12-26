@@ -22,6 +22,7 @@ namespace CartMan
 
         private void btnSplitBrowseFile_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Multiselect = false;
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 tbSplitInputFile.Text = openFileDialog1.FileName;
@@ -40,6 +41,7 @@ namespace CartMan
 
         private void btnMergeBrowseLow_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Multiselect = false;
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 tbMergeLowFile.Text = openFileDialog1.FileName;
@@ -50,6 +52,7 @@ namespace CartMan
 
         private void btnMergeBrowseHigh_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Multiselect = false;
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 tbMergeHighFile.Text = openFileDialog1.FileName;
@@ -142,6 +145,7 @@ namespace CartMan
 
         private void btnBsBrowseFile_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Multiselect = false;
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 tbBsInputFile.Text = openFileDialog1.FileName;
@@ -194,7 +198,7 @@ namespace CartMan
             var writeOk = true;
             var fileExists = false;
             var inputSize = new FileInfo(tbSplitRomInputFile.Text).Length;
-            var chunkSize = rb4k.Checked ? 4096 : rb8k.Checked ? 8192 : rb16k.Checked ? 16384 : rb32k.Checked ? 32768 : rb64k.Checked ? 65536 : rb128k.Checked ? 131072 : rb256k.Checked ? 262144 : 524288;
+            var chunkSize = rbS4k.Checked ? 4096 : rbS8k.Checked ? 8192 : rbS16k.Checked ? 16384 : rbS32k.Checked ? 32768 : rbS64k.Checked ? 65536 : rbS128k.Checked ? 131072 : rbS256k.Checked ? 262144 : 524288;
             var romCount = (Int32)(inputSize / chunkSize);
             List<string> SepFile = new List<string>();
             for (Int32 chunk = 0; chunk < romCount; chunk++)
@@ -236,6 +240,7 @@ namespace CartMan
 
         private void btnSplitRomBrowseFile_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Multiselect = false;
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 tbSplitRomInputFile.Text = openFileDialog1.FileName;
@@ -249,6 +254,58 @@ namespace CartMan
             if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 tbSplitRomOutputFolder.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void btnMergeRBrowseInput_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Multiselect = true;
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                saveFileDialog1.InitialDirectory = Path.GetDirectoryName(openFileDialog1.FileName);
+                foreach (String file in openFileDialog1.FileNames)
+                {
+                    lbSourceFiles.Items.Add(file);
+                }
+            }
+        }
+
+        private void btnMergeRBrowseOutput_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                tbMergeROutputFile.Text = saveFileDialog1.FileName;
+            }
+        }
+
+        private void btnMergeRGo_Click(object sender, EventArgs e)
+        {
+            var writeOk = true;
+            var chunkSize = rbM4k.Checked ? 4096 : rbM8k.Checked ? 8192 : rbM16k.Checked ? 16384 : rbM32k.Checked ? 32768 : rbM64k.Checked ? 65536 : rbM128k.Checked ? 131072 : rbM256k.Checked ? 262144 : 524288;
+            //if (File.Exists(tbMergeROutputFile.Text))
+            //{
+            //    var result = MessageBox.Show("Merged ROM file already exists in the destination directory. Overwrite?", "File Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            //    if (result == DialogResult.No) writeOk = false;
+            //}
+            if (writeOk)
+            {
+                using (FileStream mergedStream = new FileStream(tbMergeROutputFile.Text, FileMode.Create))
+                {
+                    for (Int32 file = 0; file < lbSourceFiles.Items.Count; file++)
+                    //foreach (string inputFile in lbSourceFiles.Items)
+                    {
+                        using (FileStream inputStream = new FileStream((string)lbSourceFiles.Items[file], FileMode.Open))
+                        {
+                            for (Int32 i = 0; i < chunkSize; i++)
+                            {
+                                mergedStream.WriteByte((byte)inputStream.ReadByte());
+                                tbProgress.Value = (int)(100 * (file * chunkSize + i + 1) / (lbSourceFiles.Items.Count * chunkSize));
+                            }
+                        }
+                    }
+                    MessageBox.Show("Files merged successfully!", "Job Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tbProgress.Value = 0;
+                }
             }
         }
     }
