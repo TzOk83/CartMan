@@ -9,3 +9,5 @@ You may use this program to:
 - do a bytwswap in 16-bit ROM image (i.e. for 68k ROMs).
 - Make a multicart (with a fixed "slot" size).
 - Split a multipart image into original (separate) fixed size ROMs.
+
+Nomenclature used in program is for Little Endian (e.g. x86), if ROMs are about to be used in a Big Endian machine (e.g. MC68000 - Atari ST, Amiga, Neo Geo) L/H (O/E) parts should be swapped.
