@@ -1,5 +1,5 @@
 # CartMan
-ROM Images Manipultation Programm for Cartridges
+ROM Images Manipultation Programm for Cartridges (CARTridge MANager)
 
 This is an early alpha version experimental build. Very little sanity checks are done upon working on ROM images, yet the program itself is fully functional now.
 
