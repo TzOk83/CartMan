@@ -77,9 +77,7 @@
             this.btnSplitRomBrowseFile = new System.Windows.Forms.Button();
             this.tbSplitRomInputFile = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lbSourceFiles = new System.Windows.Forms.ListBox();
             this.rbM4k = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.rbM512k = new System.Windows.Forms.RadioButton();
@@ -95,7 +93,9 @@
             this.tbMergeROutputFile = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.btnMergeRBrowseInput = new System.Windows.Forms.Button();
-            this.lbSourceFiles = new System.Windows.Forms.ListBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -349,7 +349,7 @@
             this.btnBsGo.Name = "btnBsGo";
             this.btnBsGo.Size = new System.Drawing.Size(75, 23);
             this.btnBsGo.TabIndex = 13;
-            this.btnBsGo.Text = "GO!";
+            this.btnBsGo.Text = "&GO!";
             this.btnBsGo.UseVisualStyleBackColor = true;
             this.btnBsGo.Click += new System.EventHandler(this.btnBsGo_Click);
             // 
@@ -618,10 +618,14 @@
             this.tabPage5.ToolTipText = "Merge ROMs into a stacked image (multi-cart).";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // openFileDialog1
+            // lbSourceFiles
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "BIN files (*.bin)|*.bin|All files (*.*)|*.*";
+            this.lbSourceFiles.Location = new System.Drawing.Point(65, 4);
+            this.lbSourceFiles.Name = "lbSourceFiles";
+            this.lbSourceFiles.ScrollAlwaysVisible = true;
+            this.lbSourceFiles.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lbSourceFiles.Size = new System.Drawing.Size(303, 30);
+            this.lbSourceFiles.TabIndex = 39;
             // 
             // rbM4k
             // 
@@ -777,14 +781,10 @@
             this.btnMergeRBrowseInput.UseVisualStyleBackColor = true;
             this.btnMergeRBrowseInput.Click += new System.EventHandler(this.btnMergeRBrowseInput_Click);
             // 
-            // lbSourceFiles
+            // openFileDialog1
             // 
-            this.lbSourceFiles.Location = new System.Drawing.Point(65, 4);
-            this.lbSourceFiles.Name = "lbSourceFiles";
-            this.lbSourceFiles.ScrollAlwaysVisible = true;
-            this.lbSourceFiles.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lbSourceFiles.Size = new System.Drawing.Size(303, 30);
-            this.lbSourceFiles.TabIndex = 39;
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "BIN files (*.bin)|*.bin|All files (*.*)|*.*";
             // 
             // Form1
             // 

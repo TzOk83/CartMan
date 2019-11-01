@@ -7,3 +7,13 @@ D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.exe
 D:\Users\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.pdb
 d:\Users\Tomek\documents\visual studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.csprojResolveAssemblyReference.cache
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\bin\Release\CartMan.exe.config
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\bin\Release\CartMan.exe
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\bin\Release\CartMan.pdb
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.csprojAssemblyReference.cache
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.Form1.resources
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.Properties.Resources.resources
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.csproj.GenerateResource.cache
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.csproj.CoreCompileInputs.cache
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.exe
+D:\Tomek\Documents\Visual Studio 2012\Projects\CartMan\CartMan\obj\Release\CartMan.pdb
