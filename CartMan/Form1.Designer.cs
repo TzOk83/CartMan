@@ -97,6 +97,11 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.bgwSplitLH = new System.ComponentModel.BackgroundWorker();
+            this.bgwMergeLH = new System.ComponentModel.BackgroundWorker();
+            this.bgwByteswap = new System.ComponentModel.BackgroundWorker();
+            this.bgwSplitR = new System.ComponentModel.BackgroundWorker();
+            this.bgwMergeR = new System.ComponentModel.BackgroundWorker();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -786,6 +791,41 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "BIN files (*.bin)|*.bin|All files (*.*)|*.*";
             // 
+            // bgwSplitLH
+            // 
+            this.bgwSplitLH.WorkerReportsProgress = true;
+            this.bgwSplitLH.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwSplitLH_DoWork);
+            this.bgwSplitLH.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwSplitLH_ProgressChanged);
+            this.bgwSplitLH.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwSplitLH_RunWorkerCompleted);
+            // 
+            // bgwMergeLH
+            // 
+            this.bgwMergeLH.WorkerReportsProgress = true;
+            this.bgwMergeLH.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwMergeLH_DoWork);
+            this.bgwMergeLH.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwMergeLH_ProgressChanged);
+            this.bgwMergeLH.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwMergeLH_RunWorkerCompleted);
+            // 
+            // bgwByteswap
+            // 
+            this.bgwByteswap.WorkerReportsProgress = true;
+            this.bgwByteswap.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwByteswap_DoWork);
+            this.bgwByteswap.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwByteswap_ProgressChanged);
+            this.bgwByteswap.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwByteswap_RunWorkerCompleted);
+            // 
+            // bgwSplitR
+            // 
+            this.bgwSplitR.WorkerReportsProgress = true;
+            this.bgwSplitR.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwSplitR_DoWork);
+            this.bgwSplitR.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwSplitR_ProgressChanged);
+            this.bgwSplitR.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwSplitR_RunWorkerCompleted);
+            // 
+            // bgwMergeR
+            // 
+            this.bgwMergeR.WorkerReportsProgress = true;
+            this.bgwMergeR.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwMergeR_DoWork);
+            this.bgwMergeR.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwMergeR_ProgressChanged);
+            this.bgwMergeR.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwMergeR_RunWorkerCompleted);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -885,6 +925,11 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnMergeRBrowseInput;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.ComponentModel.BackgroundWorker bgwSplitLH;
+        private System.ComponentModel.BackgroundWorker bgwMergeLH;
+        private System.ComponentModel.BackgroundWorker bgwByteswap;
+        private System.ComponentModel.BackgroundWorker bgwSplitR;
+        private System.ComponentModel.BackgroundWorker bgwMergeR;
     }
 }
 
