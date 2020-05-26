@@ -315,6 +315,7 @@ namespace CartMan
             openFileDialog1.Multiselect = true;
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                lbSourceFiles.Items.Clear();
                 saveFileDialog1.InitialDirectory = Path.GetDirectoryName(openFileDialog1.FileName);
                 foreach (String file in openFileDialog1.FileNames)
                 {
